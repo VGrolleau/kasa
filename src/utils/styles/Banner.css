@@ -3,6 +3,7 @@
   background: center / contain no-repeat
     url('../../assets/eric-muhr-P_XxsdVgtpQ-unsplash.jpg');
   background-size: 100%;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;

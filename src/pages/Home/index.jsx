@@ -1,13 +1,14 @@
 import '../../utils/styles/Home.css';
-import Header from '../../components/Header/index.jsx';
-import Banner from '../../components/Banner/index.jsx';
+import Header from '../../components/Header';
+import Banner from '../../components/Banner';
+import Cards from '../../components/Cards';
 
 function Home() {
   return (
     <div className='home'>
       <Header />
       <Banner />
-      <h1>Accueil</h1>
+      <Cards />
     </div>
   );
 }
