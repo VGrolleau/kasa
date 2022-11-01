@@ -4,7 +4,7 @@ import Banner from '../../components/Banner/index.jsx';
 
 function Home() {
   return (
-    <div>
+    <div className='home'>
       <Header />
       <Banner />
       <h1>Accueil</h1>

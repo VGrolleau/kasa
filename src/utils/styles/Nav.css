@@ -1,11 +1,11 @@
-a {
+nav a {
   font-size: 24px;
   color: #ff6060;
   text-decoration: none;
   margin-left: 60px;
 }
 
-a:hover,
-a.active {
+nav a:hover,
+nav a.active {
   text-decoration: underline;
 }
