@@ -1,6 +1,11 @@
+import Header from '../../components/Header/index.jsx';
+
 function Housing() {
     return (
-        <h1>Logements</h1>
+        <div>
+            <Header />
+            <h1>Logements</h1>
+        </div>
     );
 }
 

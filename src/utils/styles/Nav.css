@@ -1,0 +1,11 @@
+a {
+  font-size: 24px;
+  color: #ff6060;
+  text-decoration: none;
+  margin-left: 60px;
+}
+
+a:hover,
+a.active {
+  text-decoration: underline;
+}
