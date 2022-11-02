@@ -1,5 +1,6 @@
 .card {
-  background: linear-gradient(#ff6060, #000000 100%);
+  background-size: cover;
+  background-repeat: none;
   width: 340px;
   height: 340px;
   border-radius: 10px;
