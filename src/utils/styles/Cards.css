@@ -1,8 +1,17 @@
 .cards {
-  background-color: #f6f6f6;
-  margin: 0 100px 40px;
-  border-radius: 25px;
+  background-color: white;
+  margin: 0 20px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 1280px) {
+  .cards {
+    background-color: #f6f6f6;
+    margin: 0 100px 40px;
+    border-radius: 25px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }

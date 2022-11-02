@@ -1,7 +1,5 @@
 .banner {
   height: 110px;
-  /* background: center / contain no-repeat
-    url('../../assets/eric-muhr-P_XxsdVgtpQ-unsplash.jpg'); */
   background-image: url('../../assets/eric-muhr-P_XxsdVgtpQ-unsplash.jpg');
   background-position: bottom 200% center;
   background-repeat: no-repeat;
@@ -11,7 +9,7 @@
   align-items: center;
   justify-content: center;
   color: #f6f6f6;
-  margin: 20px;
+  margin: 20px 20px 10px;
   border-radius: 10px;
 }
 
