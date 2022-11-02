@@ -3,7 +3,13 @@
   margin: 0 20px 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+  .cards {
+    background-color: white;
+    margin: 0 50px 40px;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -11,7 +17,6 @@
     background-color: #f6f6f6;
     margin: 0 100px 40px;
     border-radius: 25px;
-    flex-wrap: wrap;
     justify-content: space-evenly;
   }
 }
