@@ -5,7 +5,7 @@ function Nav() {
     return (
         <nav>
             <Link to='/'>Accueil</Link>
-            <Link to='/about'>À propos</Link>
+            <Link to='/about'>A propos</Link>
         </nav>
     )
 }

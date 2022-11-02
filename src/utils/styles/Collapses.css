@@ -1,0 +1,5 @@
+.collapse-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 200px 40px;
+}

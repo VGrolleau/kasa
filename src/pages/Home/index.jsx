@@ -1,6 +1,6 @@
 import '../../utils/styles/Home.css';
 import Header from '../../components/Header';
-import Banner from '../../components/Banner';
+import BannerHome from '../../components/BannerHome';
 import Cards from '../../components/Cards';
 import Footer from '../../components/Footer';
 import { useEffect } from "react"
@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className='home'>
       <Header />
-      <Banner />
+      <BannerHome />
       <Cards />
       <Footer />
     </div>
