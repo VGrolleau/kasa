@@ -1,17 +1,33 @@
 .banner {
-  height: 220px;
-  background: center / contain no-repeat
-    url('../../assets/eric-muhr-P_XxsdVgtpQ-unsplash.jpg');
+  height: 110px;
+  /* background: center / contain no-repeat
+    url('../../assets/eric-muhr-P_XxsdVgtpQ-unsplash.jpg'); */
+  background-image: url('../../assets/eric-muhr-P_XxsdVgtpQ-unsplash.jpg');
+  background-position: bottom 200% center;
+  background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #f6f6f6;
-  margin: 70px 100px 45px;
-  border-radius: 25px;
+  margin: 20px;
+  border-radius: 10px;
 }
 
 .banner h1 {
-  font-size: 48px;
+  font-size: 24px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .banner {
+    background-position: center;
+    height: 220px;
+    margin: 70px 100px 45px;
+    border-radius: 25px;
+  }
+
+  .banner h1 {
+    font-size: 48px;
+  }
 }
