@@ -3,5 +3,19 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 40px 100px;
+  margin: 20px;
+}
+
+.header img {
+  width: 145px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .header {
+    margin: 40px 100px;
+  }
+
+  .header img {
+    width: 100%;
+  }
 }
