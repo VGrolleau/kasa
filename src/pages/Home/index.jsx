@@ -1,18 +1,21 @@
 import '../../utils/styles/Home.css';
-import Header from '../../components/Header';
-import BannerHome from '../../components/BannerHome';
-import Cards from '../../components/Cards';
-import Footer from '../../components/Footer';
+import Banner from '../../components/Banner'
+import ImageBanner from '../../assets/eric-muhr-P_XxsdVgtpQ-unsplash.jpg'
+import Card from '../../components/Card';
 import { useEffect } from "react"
+import Datas from '../../datas/logements.json'
 
 function Home() {
   useEffect(() => { document.title = "Kasa - Accueil" })
   return (
     <div className='home'>
-      <Header />
-      <BannerHome />
-      <Cards />
-      <Footer />
+      <Banner className="banner" image={ImageBanner} styleH1="block" />
+      <section className="cards">
+        {Datas.map(data => {
+          return <Card data={data} key={data.id} />
+        })}
+
+      </section>
     </div>
   );
 }
