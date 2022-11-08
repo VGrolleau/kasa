@@ -1,46 +1,51 @@
-.collapse {
-  margin-bottom: 30px;
-  position: relative;
-  /* display: block; */
-  background-color: #ff6060;
-  border-radius: 5px;
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
 }
 
-.collapse-button {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 5px;
-  background-color: inherit;
-  color: white;
-  padding: 1.5rem 1.25rem;
-  border: none;
-  cursor: pointer;
-}
+@media only screen and (min-width: 1280px) {
+  .collapse {
+    margin-bottom: 30px;
+    /* display: block; */
+    background-color: #ff6060;
+    border-radius: 5px;
+  }
 
-.collapse-content {
-  /* display: none; */
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px 16px;
-  color: #ff6060;
+  .collapse-button {
+    display: flex;
+    /* width: 100%; */
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: inherit;
+    color: white;
+    padding: 1.5rem 1.25rem;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    font-size: 24px;
+  }
 
-  left: 0px;
-  z-index: 1;
-  margin-top: -5px;
-  width: 100%;
-  border-radius: 0.25rem;
-  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  .collapse-content {
+    /* display: none; */
+    /* position: absolute; */
+    background-color: #f6f6f6;
+    padding: 35px 20px 20px;
+    color: #ff6060;
+    font-size: 24px;
 
-.collapse-button:focus .select-arrow {
-  transform: rotate(180deg);
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    /* left: 0px; */
+    margin-top: -5px;
+    /* width: 100%; */
+    border-radius: 5px;
+    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.select-arrow {
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  .collapse.open .collapse-button .select-arrow {
+    transform: rotate(180deg);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .select-arrow {
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
