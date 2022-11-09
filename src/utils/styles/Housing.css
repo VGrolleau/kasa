@@ -1,0 +1,41 @@
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+}
+
+@media only screen and (min-width: 1280px) {
+  .housing {
+    margin: 20px 100px;
+    color: #ff6060;
+  }
+  .title-host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title-host p {
+    margin: 0;
+    font-size: 18px;
+  }
+  .title h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 500;
+  }
+  .title .tags {
+    display: flex;
+    margin-top: 20px;
+  }
+  .host {
+    display: flex;
+    align-items: center;
+  }
+  .host p {
+    width: min-content;
+    text-align: right;
+    margin-right: 10px;
+  }
+  .host img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+}
