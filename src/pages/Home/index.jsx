@@ -14,7 +14,6 @@ function Home() {
         {Datas.map(data => {
           return <Card data={data} key={data.id} />
         })}
-
       </section>
     </div>
   );
