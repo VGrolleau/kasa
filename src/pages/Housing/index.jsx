@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useLocation } from "react-router"
 import Carousel from "../../components/Carousel"
+import Rating from "../../components/Rating";
 import Tag from "../../components/Tag";
 import '../../utils/styles/Housing.css'
 
@@ -20,9 +21,14 @@ function Housing(props) {
                         })}
                     </div>
                 </div>
-                <div className="host">
-                    <p>{location.state.data.host.name}</p>
-                    <img src={location.state.data.host.picture} alt={`${location.state.data.host.name}`} />
+                <div className="host-rating">
+                    <div className="host">
+                        <p>{location.state.data.host.name}</p>
+                        <img src={location.state.data.host.picture} alt={`${location.state.data.host.name}`} />
+                    </div>
+                    <div className="rating">
+                        <Rating rating={location.state.data.rating} />
+                    </div>
                 </div>
             </div>
         </section>

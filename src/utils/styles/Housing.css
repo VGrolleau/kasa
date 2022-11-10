@@ -9,7 +9,6 @@
   .title-host {
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
   .title-host p {
     margin: 0;
@@ -23,6 +22,12 @@
   .title .tags {
     display: flex;
     margin-top: 20px;
+  }
+  .host-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
   }
   .host {
     display: flex;
