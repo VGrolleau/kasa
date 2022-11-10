@@ -43,4 +43,13 @@
     height: 64px;
     border-radius: 50%;
   }
+  .collapses {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .collapses .collapse {
+    width: 45%;
+    align-self: baseline;
+  }
 }

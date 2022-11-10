@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useLocation } from "react-router"
 import Carousel from "../../components/Carousel"
+import Collapse from "../../components/Collapse";
 import Rating from "../../components/Rating";
 import Tag from "../../components/Tag";
 import '../../utils/styles/Housing.css'
@@ -30,6 +31,16 @@ function Housing(props) {
                         <Rating rating={location.state.data.rating} />
                     </div>
                 </div>
+            </div>
+
+            <div className="collapses">
+                <Collapse title="Description" content={location.state.data.description} />
+                <Collapse title="Équipements" content={
+                    location.state.data.equipments.map((equipment, index) => {
+                        return (
+                            <li key={index}>{equipment}</li>
+                        )
+                    })} />
             </div>
         </section>
     )
