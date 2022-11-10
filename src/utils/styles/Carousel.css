@@ -1,0 +1,113 @@
+.carousel {
+  position: relative;
+  height: 275px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.picture {
+  width: 100%;
+  height: 255px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.next-arrow,
+.previous-arrow {
+  position: absolute;
+  top: calc(50%-40px);
+  z-index: 5;
+  cursor: pointer;
+  user-select: none;
+  color: white;
+  font-size: 2em;
+}
+.next-arrow {
+  right: 5px;
+}
+.previous-arrow {
+  left: 5px;
+}
+.slide {
+  opacity: 0;
+  transition-duration: 1.5s ease;
+}
+.slide.active {
+  opacity: 1;
+  transition-duration: 1.5s;
+  transform: scale(1.08);
+  height: 255px;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+}
+.bullet {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+}
+.none {
+  display: none;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+  .carousel {
+    height: 325px;
+    margin-bottom: 15px;
+  }
+  .picture {
+    height: 300px;
+  }
+  .next-arrow,
+  .previous-arrow {
+    font-size: 3em;
+  }
+  .next-arrow {
+    right: 10px;
+  }
+  .previous-arrow {
+    left: 10px;
+  }
+  .slide.active {
+    height: 300px;
+    left: 30px;
+    right: 30px;
+  }
+  .bullet {
+    bottom: 20px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .carousel {
+    height: 465px;
+    margin-bottom: 30px;
+  }
+  .picture {
+    height: 415px;
+    border-radius: 25px;
+  }
+  .next-arrow,
+  .previous-arrow {
+    font-size: 5em;
+  }
+  .next-arrow {
+    right: 20px;
+  }
+  .previous-arrow {
+    left: 20px;
+  }
+  .slide.active {
+    height: 415px;
+    left: 65px;
+    right: 65px;
+  }
+  .bullet {
+    bottom: 25px;
+    font-size: 18px;
+  }
+}

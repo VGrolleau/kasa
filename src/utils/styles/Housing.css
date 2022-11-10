@@ -1,0 +1,124 @@
+.housing {
+  margin: 30px 20px;
+  color: #ff6060;
+}
+.title-host {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.title-host p {
+  margin: 0;
+  font-size: 14px;
+}
+.title h1 {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.title .tags {
+  display: flex;
+  margin-top: 10px;
+}
+.host-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.host {
+  display: flex;
+  align-items: center;
+}
+.host p {
+  width: min-content;
+  text-align: right;
+  margin-right: 10px;
+}
+.host img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.collapses {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.collapses .collapse {
+  width: 100%;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+  .housing {
+    margin: 30px 50px;
+  }
+  .title-host {
+    flex-direction: row;
+  }
+  .title-host p {
+    font-size: 16px;
+  }
+  .title h1 {
+    margin: 0;
+    font-size: 30px;
+  }
+  .title .tags {
+    margin-top: 20px;
+  }
+  .host-rating {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 0;
+  }
+  .host img {
+    width: 50px;
+    height: 50px;
+  }
+  .collapses {
+    margin-top: 20px;
+    flex-direction: row;
+  }
+  .collapses .collapse {
+    width: 45%;
+    align-self: baseline;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .housing {
+    margin: 20px 100px;
+  }
+  .title-host {
+    flex-direction: row;
+  }
+  .title-host p {
+    font-size: 18px;
+  }
+  .title h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+  .title .tags {
+    margin-top: 20px;
+  }
+  .host-rating {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 0;
+  }
+  .host img {
+    width: 64px;
+    height: 64px;
+  }
+  .collapses {
+    margin-top: 20px;
+    flex-direction: row;
+  }
+  .collapses .collapse {
+    width: 45%;
+    align-self: baseline;
+  }
+}
