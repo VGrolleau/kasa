@@ -38,7 +38,7 @@ function Housing(props) {
                 <Collapse title="Équipements" content={
                     location.state.data.equipments.map((equipment, index) => {
                         return (
-                            <li key={index}>{equipment}</li>
+                            <p key={index}>{equipment}</p>
                         )
                     })} />
             </div>

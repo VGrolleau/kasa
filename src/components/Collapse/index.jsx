@@ -13,7 +13,7 @@ function Collapse(props) {
             <div className='collapse-button'>
                 {title} <span className="fa-solid fa-angle-down select-arrow"></span>
             </div>
-            <ul className="collapse-content">{content}</ul>
+            <div className="collapse-content">{content}</div>
         </div>
     )
 }
