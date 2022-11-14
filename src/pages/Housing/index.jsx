@@ -1,49 +1,63 @@
 import { useEffect } from "react"
-import { useLocation } from "react-router"
+import { useParams } from "react-router"
 import Carousel from "../../components/Carousel"
-import Collapse from "../../components/Collapse";
-import Rating from "../../components/Rating";
-import Tag from "../../components/Tag";
+import Collapse from "../../components/Collapse"
+import Rating from "../../components/Rating"
+import Tag from "../../components/Tag"
 import '../../utils/styles/Housing.css'
+import Datas from "../../datas/logements.json"
+import Error from "../Error"
 
-function Housing(props) {
-    const location = useLocation();
-    useEffect(() => { document.title = `Kasa - ${location.state.data.title}` })
-    return (
-        <section className="housing">
-            <Carousel pictures={location.state.data.pictures} />
+function Housing() {
+    const urlId = useParams().housingId;
+    let datasHousing;
+    let titleDoc;
+    Datas.forEach(data => {
+        if (data.id === urlId) {
+            datasHousing = data
+        }
+    })
+    useEffect(() => { document.title = titleDoc })
+    if (datasHousing) {
+        titleDoc = `Kasa - ${datasHousing.title}`
+        return (<section className="housing" >
+            <Carousel pictures={datasHousing.pictures} />
             <div className="title-host">
                 <div className="title">
-                    <h1>{location.state.data.title}</h1>
-                    <p>{location.state.data.location}</p>
+                    <h1>{datasHousing.title}</h1>
+                    <p>{datasHousing.location}</p>
                     <div className="tags">
-                        {location.state.data.tags.map(tag => {
+                        {datasHousing.tags.map(tag => {
                             return <Tag text={tag} key={tag} />
                         })}
                     </div>
                 </div>
                 <div className="host-rating">
                     <div className="host">
-                        <p>{location.state.data.host.name}</p>
-                        <img src={location.state.data.host.picture} alt={`${location.state.data.host.name}`} />
+                        <p>{datasHousing.host.name}</p>
+                        <img src={datasHousing.host.picture} alt={`${datasHousing.host.name}`} />
                     </div>
                     <div className="rating">
-                        <Rating rating={location.state.data.rating} />
+                        <Rating rating={datasHousing.rating} />
                     </div>
                 </div>
             </div>
 
             <div className="collapses">
-                <Collapse title="Description" content={location.state.data.description} />
+                <Collapse title="Description" content={datasHousing.description} />
                 <Collapse title="Équipements" content={
-                    location.state.data.equipments.map((equipment, index) => {
+                    datasHousing.equipments.map((equipment, index) => {
                         return (
                             <p key={index}>{equipment}</p>
                         )
                     })} />
             </div>
         </section>
-    )
+        )
+    } else {
+        titleDoc = `Kasa - 404`
+        return <Error />
+    }
 }
 
 export default Housing;
