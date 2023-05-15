@@ -15,9 +15,9 @@ root.render(
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/housing/:housingId" element={<Housing />} />
+        <Route path="/kasa" element={<Home />} />
+        <Route path="/kasa/about" element={<About />} />
+        <Route path="/kasa/housing/:housingId" element={<Housing />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
